@@ -6,10 +6,6 @@
  * It's SCSS. No real description needed.
  */
 
-
-
-@import 'https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700';
-
 /**
  * Material Design Styles
  * by Google
@@ -24,8 +20,17 @@ $lBlue100: #80D8FF;
 $lBlue200: #40C4FF;
 $lBlue500: #03A9F4;
 $lBlue700: #00B0FF;
+$lBlue900: #01579B;
+
+$dOrange100: #FFCCBC;
+$dOrange300: #FF8A65;
+$dOrange500: #FF5722;
+$dOrange700: #E64A19;
+$dOrange900: #BF360C;
 
 $grey900: #212121;
+
+$invis: rgba(0,0,0,0);
 
 /* Shadows */
 .shadow1{
@@ -62,9 +67,53 @@ $default-color-dark: $grey900;
 $default-color: $blueGrey100;
 $width-default: calc(100% - 20px);
 $width-tablet: 768px;
-$width-full: 1200px;
+$width-full: 1224px;
+$ring-background-color: $invis;
+$inner-ring-color:$blueGrey500;
+$outer-ring-color:$dOrange500;
 
-/* Actual Styling */
+
+/**
+ * Animations
+ */
+@keyframes spin{
+  0%{
+    transform:rotate(0deg);
+  }
+  100%{
+    transform:rotate(360deg);
+  }
+}
+@keyframes nSpin{
+  0%{
+    transform:rotate(0deg);
+  }
+  100%{
+    transform:rotate(-360deg);
+  }
+}
+@keyframes growIn{
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+@keyframes appear{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+/* END OF ANIMATIONS
+
+/**
+ * Actual Styling 
+ */
 
 html{
   border:0;
@@ -82,14 +131,45 @@ body{
 
 h1,h2,h3,h4,h5,h6{
   font-family: 'Montserrat', sans-serif;
+  margin-bottom: 10px;
 }
 h1{
   color: $default-color-bright;
+}
+h2{
+  font-family: 'Courier New', Courier, monospace;
+  color: $default-color-dark;
+  padding:5px 15px;
+  background-color: $blueGrey100;
+  @extend .shadow1;
+}
+h3{
+  font-family: inherit;
+  color: inherit;
+  margin: -5px 0 20px;
+  font-size: 12pt;
+}
+h4{
+  color: $default-color-bright;
+  font-weight: 400;
+  font-size: 24pt;
+  margin: 25px 15px 10px;
+}
+
+p{
+  margin: 10px 0;
+}
+
+code{
+  background-color: $blueGrey100;
 }
 
 a{
   text-decoration: none;
   color: inherit;
+}
+a:hover{
+  color: $default-color-bright;
 }
 
 hr{
@@ -98,26 +178,50 @@ hr{
 }
 
 header{
-  $bgcol:$blueGrey900;
-  padding: 70px 0;
-  color: $default-color;
-  background-color: $bgcol;
-  font-family: 'Montserrat', sans-serif;
-  display: flex;
+  padding: 70px 0 20px;
+  display: block;
+  margin: auto;
   h1{
     margin-bottom: 5px;
     color: inherit;
   }
   div{
     margin:auto;
-    align-items: center;
-    display:flex;
+    display:block;
+    text-align: center;
   }
+  $bgcol:$blueGrey900;
+  color: $default-color;
+  background-color: $bgcol;
+  font-family: 'Montserrat', sans-serif;
 }
 
 section{
   width: $width-default;
   margin: auto;
+}
+
+footer{
+  width:calc(100% - 30px);
+  background: $blueGrey900;
+  color: $default-color;
+  padding: 30px 15px;
+  margin-top: 30px;
+  text-align: center;
+  hr{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: $blueGrey500;
+    margin-bottom: 10px;
+  }
+  .iconLinks{
+    display: flex;
+    justify-content: center;
+    i{
+      margin:20px 25px;
+    }
+  }
 }
 
 .circle{
@@ -130,19 +234,69 @@ section{
   margin: 5px 0;
   background-color:$default-color;
 }
-.code{
-  font-family: 'Courier New', Courier, monospace;
-  background-color: $blueGrey100;
+.card{
+  @extend .shadow2;
+  border-radius: 2px;
+  line-height: 0;
+  display: flex;
+  position:relative;
+  margin: 20px 0;
+  .img{
+    max-width: 50%;
+    margin: 0;
+    padding:0;
+  }
+  .calligSpaceFill,.calligSpaceFillFlip{
+    display: none;
+    opacity: .4;
+  }
+  .calligSpaceFillFlip{
+    -moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+    filter: FlipV;
+    -ms-filter: "FlipV";
+  }
+  img{
+    max-width: 100%;
+    width:auto;
+    position: relative;
+    display: block;
+  }
+  div{
+    width: calc(100% - 50px); // 100% - 2 * padding;
+    line-height: 1.5;
+    display: block;
+    padding: 25px;
+    margin:auto;
+  }
 }
 
+#contact{
+  .card{
+    ul{
+      list-style-type: none;
+      margin-top: 0;
+    }
+  }
+}
+#rings{
+  border-width: 0;
+  display: inline-flex;
+  line-height: 0;
+  background-color: $ring-background-color;
+}
 #cImg{
-  width:300px;
-  height:300px;
-  border-style: solid;
-  border-width: 15px;
-  border-color: rgba(0,0,0,0);
-  border-top-color: $lBlue200;
-  border-bottom-color: $lBlue200;
+  width: 225px;
+  height: 225px;
+  overflow: hidden;
+  border: solid 5px $lBlue500;
+  justify-content: center;
+  img{
+    max-width: 100%;
+    width: auto;
+  }
 }
 #cName{
   width:500px;
@@ -164,25 +318,7 @@ section{
  */
 
 /* Mobile */
-@media only screen and (max-width: 768px){
-  header{
-    padding: 70px 0 20px;
-    display: block;
-    margin: auto;
-    h1{
-      margin-bottom: 5px;
-      color: inherit;
-    }
-    div{
-      width: 100%;
-      margin:auto;
-      display:block;
-    }
-    div.circle{
-      width:300px;
-      height: 300px;
-    }
-  }
+@media only screen and (max-width: $width-tablet){
   #cName{
     width: calc(100% - 80px);
     text-align: center;
@@ -196,18 +332,96 @@ section{
       }
     }
   }
+  .card{
+    display: block;
+    .img{
+      max-width: 100%;
+      width: 100%;
+    }
+    hr{
+      display: none;
+    }
+  }
 }
 
 /* Tablet */
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: $width-tablet){
+  .animationset1{
+    animation: growIn 1.5s;
+  }
+  #rings{
+    padding: 10px;
+    border:solid 3px $outer-ring-color;
+    border-top-color: $invis;
+    border-bottom-color: $invis;
+    animation: spin 2s infinite;
+    div{
+      border:solid 30px $inner-ring-color;
+      border-left-color: $invis;
+      border-right-color: $invis;
+      animation: nSpin 1s infinite;
+      div{
+        animation: spin 1s infinite;
+        border:0;
+        div{
+          animation: nSpin 2s infinite;
+        }
+      }
+    }
+    #cImg{
+      border: solid 5px $lBlue500;
+    }
+  }
+  #cName{
+    transform: scale(0);
+    animation: growIn 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    ul{
+      justify-content: center;
+      opacity: 0;
+      transform: scale(0);
+      animation: growIn 1s, appear 2s;
+      animation-delay: 1.5s, 2s;
+      animation-fill-mode: forwards;
+    }
+  }
   section{
     max-width: $width-tablet;
+  }
+  .card{
+    div{
+      width:50%;
+    }
+    hr{
+      width:95%;
+    }
   }
 }
 
 /* Laptop */
-@media only screen and (min-width: 1200px){
+@media only screen and (min-width: $width-full){
+  header{
+    padding: 70px 0;
+    display: flex;
+    div{
+      margin:auto;
+      align-items: flex-start;
+      display:flex;
+    }
+  }
+  #cName{
+    text-align: left;
+    ul{
+      justify-content: flex-start;
+    }
+  }
   section{
     max-width: $width-full;
+  }
+  .card{
+    .calligSpaceFill,.calligSpaceFillFlip{
+      display: block;
+    }
   }
 }
