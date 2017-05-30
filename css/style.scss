@@ -336,8 +336,7 @@ footer{
   .card{
     display: block;
     .img{
-      max-height: 100%;
-      height: 100%;
+      display: none;
     }
     hr{
       display: none;
