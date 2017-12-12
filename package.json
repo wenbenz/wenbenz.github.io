@@ -1,0 +1,25 @@
+{
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-scss": "latest",
+    "gulp-sass": "latest",
+    "gulp-csso": "latest"
+  },
+  "name": "wenbinzhao.com",
+  "version": "1.2.1",
+  "description": "Personal Website",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wenbenz/wenbenz.github.io.git"
+  },
+  "author": "Ben Zhao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wenbenz/wenbenz.github.io/issues"
+  },
+  "homepage": "https://github.com/wenbenz/wenbenz.github.io#readme"
+}
