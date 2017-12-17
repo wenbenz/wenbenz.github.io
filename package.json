@@ -10,7 +10,9 @@
   "description": "Personal Website",
   "main": "gulpfile.js",
   "dependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-watch": "^4.3.11",
+    "typescript": "^2.6.2"
   },
   "repository": {
     "type": "git",
