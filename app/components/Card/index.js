@@ -1,14 +1,13 @@
 const React = require('react');
-
 export class Card extends React.Component {
     render() {
         return (
-            <div class='card'>
-                <div class='img'>
+            <div className='card'>
+                <div className='img'>
                     <img src="img/contact.jpg" />
                 </div>
                 <div>
-                    <img class="calligSpaceFill" src="img/callig.svg" title="Calligraphy Space Filler by EezyPremium" />
+                    <img className="calligSpaceFill" src="img/callig.svg" title="Calligraphy Space Filler by EezyPremium" />
                     <hr />
                     <h4>Ben Zhao</h4>
                     <ul>
@@ -20,7 +19,7 @@ export class Card extends React.Component {
                         </li>
                     </ul>
                     <hr />
-                    <img class="calligSpaceFillFlip" src="img/callig.svg" />
+                    <img className="calligSpaceFillFlip" src="img/callig.svg" />
                 </div>
             </div>
         );
