@@ -12,9 +12,9 @@ export class Card extends React.Component {
                     <h4>Ben Zhao</h4>
                     <ul>
                         <li>
-                            <b>Phone:</b> 306-737-2773</li>
+                            <b>Phone: </b> 306-737-2773</li>
                         <li>
-                            <b>Email:</b>
+                            <b>Email: </b>
                             <a href="mailto:ben@wenbinzhao.com">ben@wenbinzhao.com</a>
                         </li>
                     </ul>
