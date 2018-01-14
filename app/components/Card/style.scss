@@ -1,0 +1,55 @@
+@import '../../common.scss';
+.card{
+  @extend .componentShadow;
+  border-radius: 2px;
+  line-height: 0;
+  display: flex;
+  flex-direction: column;
+  position:relative;
+  margin: 20px 0;
+  .img{
+    max-width: 50%;
+    height:100%;
+    margin: 0;
+    padding:0;
+    display: none;
+  }
+  .calligSpaceFill,.calligSpaceFillFlip{
+    display: block;
+    opacity: .4;
+  }
+  .calligSpaceFillFlip{
+    -moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+    filter: FlipV;
+    -ms-filter: "FlipV";
+  }
+  img{
+    max-width: 100%;
+    width:auto;
+    position: relative;
+    display: block;
+  }
+  > div{
+    width: calc(100% - 50px); // 100% - 2 * padding;
+    line-height: 1.5;
+    display: block;
+    padding: 25px;
+    margin:auto;
+  }
+  ul{
+      list-style-type: none;
+      margin-top: 0;
+  }
+}
+
+@media only screen and (min-width: 768px){
+  .card{
+    flex-direction: row;
+    .img{
+      display: block;
+    }
+  }
+}
