@@ -1,4 +1,5 @@
 const React = require('react');
+import './style.scss';
 export class Experience extends React.Component {
     arrayToList(array) {
         return array.map(a => <li>{a}</li>);
@@ -8,7 +9,7 @@ export class Experience extends React.Component {
         return (
             <div>
                 <h4><b>{exp.title}</b>{(exp.position ? "-" + exp.position : "")}</h4>
-                <span>{exp.startDate + "-" + (exp.endDate || "Present")}</span>
+                <span className='date'>{exp.startDate + "-" + (exp.endDate || "Present")}</span>
                 <ul>
                     {this.arrayToList(exp.points)}
                 </ul>

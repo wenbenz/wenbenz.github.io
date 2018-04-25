@@ -1,55 +1,40 @@
 @import '../../common.scss';
-.card{
+[component='card'] {
   @extend .componentShadow;
   border-radius: 2px;
   line-height: 0;
   display: flex;
   flex-direction: column;
-  position:relative;
+  position: relative;
   margin: 20px 0;
-  .img{
+  .imgBox {
     max-width: 50%;
-    height:100%;
     margin: 0;
-    padding:0;
-    display: none;
+    padding: 0;
+    display: none; // flex in media query
+    align-content: center;
+    justify-content: center;
+    img {
+      max-width: 100%; // height: 100%;
+      object-fit: cover;
+      position: relative;
+      align-self: center;
+    }
   }
-  .calligSpaceFill,.calligSpaceFillFlip{
-    display: block;
-    opacity: .4;
-  }
-  .calligSpaceFillFlip{
-    -moz-transform: scaleY(-1);
-    -o-transform: scaleY(-1);
-    -webkit-transform: scaleY(-1);
-    transform: scaleY(-1);
-    filter: FlipV;
-    -ms-filter: "FlipV";
-  }
-  img{
-    max-width: 100%;
-    width:auto;
-    position: relative;
-    display: block;
-  }
-  > div{
+  >div {
     width: calc(100% - 50px); // 100% - 2 * padding;
     line-height: 1.5;
     display: block;
     padding: 25px;
-    margin:auto;
-  }
-  ul{
-      list-style-type: none;
-      margin-top: 0;
+    margin: auto;
   }
 }
 
-@media only screen and (min-width: 768px){
-  .card{
+@media only screen and (min-width: $width-tablet) {
+  [component='card'] {
     flex-direction: row;
-    .img{
-      display: block;
+    .imgBox {
+      display: flex;
     }
   }
 }
