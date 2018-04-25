@@ -1,253 +1,245 @@
-/**
- * It's SCSS. No real description needed.
- */
-
-/**
- * Material Design Styles
- * by Google
- */
-
-/* Colour Pallette */
-$blueGrey100: #CFD8DC;
-$blueGrey500: #607D8B;
-$blueGrey900: #263238;
-
-$lBlue100: #80D8FF;
-$lBlue200: #40C4FF;
-$lBlue500: #03A9F4;
-$lBlue700: #00B0FF;
-$lBlue900: #01579B;
-
-$dOrange100: #FFCCBC;
-$dOrange300: #FF8A65;
-$dOrange500: #FF5722;
-$dOrange700: #E64A19;
-$dOrange900: #BF360C;
-
-$grey900: #212121;
-
-$invis: rgba(0,0,0,0);
-
-/* Shadows */
-.shadow1{
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-              0 1px 5px 0 rgba(0, 0, 0, 0.12),
-              0 3px 1px -2px rgba(0, 0, 0, 0.2);
-}
-.shadow2{
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
-              0 1px 10px 0 rgba(0, 0, 0, 0.12),
-              0 2px 4px -1px rgba(0, 0, 0, 0.3);
-}
-.shadow3{
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14),
-              0 1px 18px 0 rgba(0, 0, 0, 0.12),
-              0 3px 5px -1px rgba(0, 0, 0, 0.3);
-}
-.shadow4{
-  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
-              0 3px 14px 2px rgba(0, 0, 0, 0.12),
-              0 5px 5px -3px rgba(0, 0, 0, 0.3);
-}
-.shadow5{
-  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14),
-              0 6px 30px 5px rgba(0, 0, 0, 0.12),
-              0 8px 10px -5px rgba(0, 0, 0, 0.3);
-}
-
-/* END OF MATERIAL DESIGN STYLES */
-
-/* Other Variables */
-$default-color-bright: $lBlue500;
-$default-color-dark: $grey900;
-$default-color: $blueGrey100;
-$width-default: calc(100% - 20px);
-$width-tablet: 768px;
-$width-full: 1224px;
-$ring-background-color: $invis;
-$inner-ring-color:$blueGrey500;
-$outer-ring-color:$dOrange500;
-
-
-/**
- * Animations
- */
-@keyframes spin{
-  0%{
-    transform:rotate(0deg);
-  }
-  100%{
-    transform:rotate(360deg);
-  }
-}
-@keyframes nSpin{
-  0%{
-    transform:rotate(0deg);
-  }
-  100%{
-    transform:rotate(-360deg);
-  }
-}
-@keyframes growIn{
-  0%{
-    transform: scale(0);
-  }
-  100%{
-    transform: scale(1);
-  }
-}
-@keyframes appear{
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-}
-
-/* END OF ANIMATIONS
-
-/**
- * Actual Styling 
- */
-
-html{
-  border:0;
-  margin:0;
-  padding: 0;
-}
-
-body{
-  margin:0;
-  font-family: 'Lato', sans-serif;
-  color: $default-color-dark;
-	line-height: 1.5;
-	font-size: 14pt;
-}
-
-h1,h2,h3,h4,h5,h6{
-  font-family: 'Montserrat', sans-serif;
-  margin-bottom: 10px;
-}
-h1{
-  color: $default-color-bright;
-}
-h2{
-  font-family: 'Courier New', Courier, monospace;
-  color: $default-color-dark;
-  padding:5px 15px;
-  background-color: $blueGrey100;
-  @extend .shadow1;
-}
-h3{
-  font-family: inherit;
-  color: inherit;
-  margin: -5px 0 20px;
-  font-size: 12pt;
-}
-h4{
-  color: $default-color-bright;
-  font-weight: 400;
-  font-size: 24pt;
-  margin: 25px 15px 10px;
-}
-
-p{
-  margin: 10px 0;
-}
-
-code{
-  background-color: $blueGrey100;
-}
-
-a{
-  text-decoration: none;
-  color: inherit;
-}
-a:hover{
-  color: $default-color-bright;
-}
-
-hr{
-  width: 80%;
-  margin: auto
-}
-
-header{
-  padding: 70px 0 20px;
-  display: block;
-  margin: auto;
-  h1{
-    margin-bottom: 5px;
-    color: inherit;
-  }
-  div{
-    margin:auto;
-    display:block;
-    text-align: center;
-  }
-  $bgcol:$blueGrey900;
-  color: $default-color;
-  background-color: $bgcol;
-  font-family: 'Montserrat', sans-serif;
-}
-
-section{
-  width: $width-default;
-  margin: auto;
-}
-
-footer{
-  width:calc(100% - 30px);
-  background: $blueGrey900;
-  color: $default-color;
-  padding: 30px 15px;
-  margin-top: 30px;
-  text-align: center;
-  hr{
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-color: $blueGrey500;
-    margin-bottom: 10px;
-  }
-  .iconLinks{
-    display: flex;
-    justify-content: center;
-    svg{
-      margin:20px 25px;
-    }
-  }
-}
-
-.circle{
-  border-radius: 50%;
-}
-.hBar{
-  display: block;
-  width:100%;
-  height:3px;
-  margin: 5px 0;
-  background-color:$default-color;
-}
-.card{
-  @extend .shadow2;
-  border-radius: 2px;
-  line-height: 0;
-  display: flex;
-  position:relative;
-  margin: 20px 0;
-  .img{
-    max-width: 50%;
-    height:100%;
-    margin: 0;
-    padding:0;
-  }
-  .calligSpaceFill,.calligSpaceFillFlip{
-    display: none;
+// /**
+//  * It's SCSS. No real description needed.
+//  */
+// @import 'common.scss';
+// /**
+//  * Material Design Styles
+//  * by Google
+//  */
+// /* Colour Pallette */
+// $blueGrey100: #CFD8DC;
+// $blueGrey500: #607D8B;
+// $blueGrey900: #263238;
+// $lBlue100: #80D8FF;
+// $lBlue200: #40C4FF;
+// $lBlue500: #03A9F4;
+// $lBlue700: #00B0FF;
+// $lBlue900: #01579B;
+// $dOrange100: #FFCCBC;
+// $dOrange300: #FF8A65;
+// $dOrange500: #FF5722;
+// $dOrange700: #E64A19;
+// $dOrange900: #BF360C;
+// $grey900: #212121;
+// $invis: rgba(0, 0, 0, 0);
+// /* Shadows */
+// .shadow1 {
+//   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+// }
+// .shadow2 {
+//   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+// }
+// .shadow3 {
+//   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+// }
+// .shadow4 {
+//   box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+// }
+// .shadow5 {
+//   box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+// }
+// /* END OF MATERIAL DESIGN STYLES */
+// /* Other Variables */
+// $default-color-bright: $lBlue500;
+// $default-color-dark: $grey900;
+// $default-color: $blueGrey100;
+// $width-default: calc(100% - 20px);
+// $ring-background-color: $invis;
+// $inner-ring-color:$blueGrey500;
+// $outer-ring-color:$dOrange500;
+// /**
+//  * Animations
+//  */
+// @keyframes spin {
+//   0% {
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     transform: rotate(360deg);
+//   }
+// }
+// @keyframes nSpin {
+//   0% {
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     transform: rotate(-360deg);
+//   }
+// }
+// @keyframes growIn {
+//   0% {
+//     transform: scale(0);
+//   }
+//   100% {
+//     transform: scale(1);
+//   }
+// }
+// @keyframes appear {
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
+// /* END OF ANIMATIONS
+// /**
+//  * Actual Styling 
+//  */
+// html {
+//   border: 0;
+//   margin: 0;
+//   padding: 0;
+// }
+// body {
+//   margin: 0;
+//   font-family: 'Lato', sans-serif;
+//   color: $default-color-dark;
+//   line-height: 1.5;
+//   font-size: 14pt;
+// }
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   font-family: 'Montserrat', sans-serif;
+//   margin-bottom: 10px;
+// }
+// h1 {
+//   color: $default-color-bright;
+// }
+// h2 {
+//   font-family: 'Courier New', Courier, monospace;
+//   color: $default-color-dark;
+//   padding: 5px 15px;
+//   background-color: $blueGrey100;
+//   @extend .shadow1;
+// }
+// h3 {
+//   font-family: inherit;
+//   color: inherit;
+//   margin: -5px 0 20px;
+//   font-size: 12pt;
+// }
+// h4 {
+//   color: $default-color-bright;
+//   font-weight: 400;
+//   font-size: 24pt;
+//   margin: 25px 15px 10px;
+// }
+// p {
+//   margin: 10px 0;
+// }
+// code {
+//   background-color: $blueGrey100;
+// }
+// a {
+//   text-decoration: none;
+//   color: inherit;
+// }
+// a:hover {
+//   color: $default-color-bright;
+// }
+// hr {
+//   width: 80%;
+//   margin: auto
+// }
+// header {
+//   padding: 70px 0 20px;
+//   display: block;
+//   margin: auto;
+//   h1 {
+//     margin-bottom: 5px;
+//     color: inherit;
+//   }
+//   div {
+//     margin: auto;
+//     display: block;
+//     text-align: center;
+//   }
+//   $bgcol:$blueGrey900;
+//   color: $default-color;
+//   background-color: $bgcol;
+//   font-family: 'Montserrat',
+//   sans-serif;
+// }
+// section {
+//   width: $width-default;
+//   margin: auto;
+// }
+// footer {
+//   width: calc(100% - 30px);
+//   background: $blueGrey900;
+//   color: $default-color;
+//   padding: 30px 15px;
+//   margin-top: 30px;
+//   text-align: center;
+//   hr {
+//     border-top: none;
+//     border-left: none;
+//     border-right: none;
+//     border-color: $blueGrey500;
+//     margin-bottom: 10px;
+//   }
+//   .iconLinks {
+//     display: flex;
+//     justify-content: center;
+//     svg {
+//       margin: 20px 25px;
+//     }
+//   }
+// }
+// .circle {
+//   border-radius: 50%;
+// }
+// .hBar {
+//   display: block;
+//   width: 100%;
+//   height: 3px;
+//   margin: 5px 0;
+//   background-color: $default-color;
+// }
+// #rings {
+//   border-width: 0;
+//   display: inline-flex;
+//   line-height: 0;
+//   background-color: $ring-background-color;
+// }
+// #cImg {
+//   width: 225px;
+//   height: 225px;
+//   overflow: hidden;
+//   border: solid 5px $lBlue500;
+//   justify-content: center;
+//   img {
+//     max-width: 100%;
+//     width: auto;
+//   }
+// }
+// #cName {
+//   width: 500px;
+//   padding: 20px;
+//   display: block;
+//   ul {
+//     padding: 0 0 0 10px;
+//     list-style-type: none;
+//     display: flex;
+//     justify-content: flex-start;
+//     li {
+//       margin-right: 20px;
+//     }
+//   }
+// }
+#contact {
+  .calligSpaceFill,
+  .calligSpaceFillFlip {
+    display: block;
     opacity: .4;
+    width: 100%;
   }
-  .calligSpaceFillFlip{
+  .calligSpaceFillFlip {
     -moz-transform: scaleY(-1);
     -o-transform: scaleY(-1);
     -webkit-transform: scaleY(-1);
@@ -255,169 +247,106 @@ footer{
     filter: FlipV;
     -ms-filter: "FlipV";
   }
-  img{
-    max-width: 100%;
-    width:auto;
-    position: relative;
-    display: block;
-  }
-  div{
-    width: calc(100% - 50px); // 100% - 2 * padding;
-    line-height: 1.5;
-    display: block;
-    padding: 25px;
-    margin:auto;
-  }
 }
 
-#contact{
-  .card{
-    ul{
-      list-style-type: none;
-      margin-top: 0;
-    }
-  }
-}
-#rings{
-  border-width: 0;
-  display: inline-flex;
-  line-height: 0;
-  background-color: $ring-background-color;
-}
-#cImg{
-  width: 225px;
-  height: 225px;
-  overflow: hidden;
-  border: solid 5px $lBlue500;
-  justify-content: center;
-  img{
-    max-width: 100%;
-    width: auto;
-  }
-}
-#cName{
-  width:500px;
-  padding:20px;
-  display: block;
-  ul{
-    padding: 0 0 0 10px;
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-start;
-    li{
-      margin-right: 20px;
-    }
-  }
-}
-
-/**
- * Media Queries
- */
-
-/* Mobile */
-@media only screen and (max-width: $width-tablet){
-  #cName{
-    width: calc(100% - 80px);
-    text-align: center;
-    ul{
-      display:block;
-      border: solid 1px $blueGrey100;
-      border-radius: 10px;
-      li{
-        padding: 10px 0;
-        border-bottom: solid 1px $blueGrey100;
-      }
-    }
-  }
-  .card{
-    display: block;
-    .img{
-      display: none;
-    }
-    hr{
-      display: none;
-    }
-  }
-}
-
-/* Tablet */
-@media only screen and (min-width: $width-tablet){
-  .animationset1{
-    animation: growIn 1.5s;
-  }
-  #rings{
-    padding: 10px;
-    border:solid 3px $outer-ring-color;
-    border-top-color: $invis;
-    border-bottom-color: $invis;
-    animation: spin 2s 2;
-    div{
-      border:solid 30px $inner-ring-color;
-      border-left-color: $invis;
-      border-right-color: $invis;
-      animation: nSpin 1s 3;
-      div{
-        animation: spin 1s 3;
-        border:0;
-        div{
-          animation: nSpin 2s 2;
-        }
-      }
-    }
-    #cImg{
-      border: solid 5px $lBlue500;
-    }
-  }
-  #cName{
-    transform: scale(0);
-    animation: growIn 1s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-    ul{
-      justify-content: center;
-      opacity: 0;
-      transform: scale(0);
-      animation: growIn 1s, appear 2s;
-      animation-delay: 1.5s, 2s;
-      animation-fill-mode: forwards;
-    }
-  }
-  section{
-    max-width: $width-tablet;
-  }
-  .card{
-    div{
-      width:50%;
-    }
-    hr{
-      width:95%;
-    }
-  }
-}
-
-/* Laptop */
-@media only screen and (min-width: $width-full){
-  header{
-    padding: 70px 0;
-    display: flex;
-    div{
-      margin:auto;
-      align-items: flex-start;
-      display:flex;
-    }
-  }
-  #cName{
-    text-align: left;
-    ul{
-      justify-content: flex-start;
-    }
-  }
-  section{
-    max-width: $width-full;
-  }
-  .card{
-    .calligSpaceFill,.calligSpaceFillFlip{
-      display: block;
-    }
-  }
-}
+// /**
+//  * Media Queries
+//  */
+// /* Mobile */
+// @media only screen and (max-width: $width-tablet) {
+//   #cName {
+//     width: calc(100% - 80px);
+//     text-align: center;
+//     ul {
+//       display: block;
+//       border: solid 1px $blueGrey100;
+//       border-radius: 10px;
+//       li {
+//         padding: 10px 0;
+//         border-bottom: solid 1px $blueGrey100;
+//       }
+//     }
+//   } // .card{
+//   //   display: block;
+//   //   .img{
+//   //     display: none;
+//   //   }
+//   //   hr{
+//   //     display: none;
+//   //   }
+//   // }
+// }
+// /* Tablet */
+// @media only screen and (min-width: $width-tablet) {
+//   .animationset1 {
+//     animation: growIn 1.5s;
+//   }
+//   #rings {
+//     padding: 10px;
+//     border: solid 3px $outer-ring-color;
+//     border-top-color: $invis;
+//     border-bottom-color: $invis;
+//     animation: spin 2s 2;
+//     div {
+//       border: solid 30px $inner-ring-color;
+//       border-left-color: $invis;
+//       border-right-color: $invis;
+//       animation: nSpin 1s 3;
+//       div {
+//         animation: spin 1s 3;
+//         border: 0;
+//         div {
+//           animation: nSpin 2s 2;
+//         }
+//       }
+//     }
+//     #cImg {
+//       border: solid 5px $lBlue500;
+//     }
+//   }
+//   #cName {
+//     transform: scale(0);
+//     animation: growIn 1s;
+//     animation-delay: 1s;
+//     animation-fill-mode: forwards;
+//     ul {
+//       justify-content: center;
+//       opacity: 0;
+//       transform: scale(0);
+//       animation: growIn 1s, appear 2s;
+//       animation-delay: 1.5s, 2s;
+//       animation-fill-mode: forwards;
+//     }
+//   }
+//   section {
+//     max-width: $width-tablet;
+//   } // .card{
+//   //   div{
+//   //     width:50%;
+//   //   }
+//   //   hr{
+//   //     width:95%;
+//   //   }
+//   // }
+// }
+// /* Laptop */
+// @media only screen and (min-width: $width-full) {
+//   header {
+//     padding: 70px 0;
+//     display: flex;
+//     div {
+//       margin: auto;
+//       align-items: flex-start;
+//       display: flex;
+//     }
+//   }
+//   #cName {
+//     text-align: left;
+//     ul {
+//       justify-content: flex-start;
+//     }
+//   }
+//   section {
+//     max-width: $width-full;
+//   }
+// }

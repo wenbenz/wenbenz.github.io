@@ -4,12 +4,13 @@ export class Experience extends React.Component {
         return array.map(a => <li>{a}</li>);
     }
     render() {
+        let exp = this.props.experience;
         return (
             <div>
-                <h4><b>{this.props.title}</b>{(this.props.position ? "-" + this.props.position : "")}</h4>
-                <span>{this.props.startDate + "-" + (this.props.endDate || "Present")}</span>
+                <h4><b>{exp.title}</b>{(exp.position ? "-" + exp.position : "")}</h4>
+                <span>{exp.startDate + "-" + (exp.endDate || "Present")}</span>
                 <ul>
-                    {this.arrayToList(this.props.points)}
+                    {this.arrayToList(exp.points)}
                 </ul>
             </div>
         )
