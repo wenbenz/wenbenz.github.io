@@ -2,11 +2,16 @@
 ul.NavList {
     display: flex;
     flex-direction: row;
+    overflow: scroll;
+    
     
     li {
         list-style-type: none;
         margin-right: 2em;
     }
+}
+ul.NavList::-webkit-scrollbar{
+    display: none;
 }
 @media only screen and (min-width: $width-tablet) {
 ul.NavList {
