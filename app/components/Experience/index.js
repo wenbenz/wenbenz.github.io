@@ -37,10 +37,7 @@ export class Experiences extends React.Component {
                 </Card>
             );
         });
-
-        console.log(exps)
-
-        return <div>{exps}</div>;
+        return exps;
     }
 }
 
