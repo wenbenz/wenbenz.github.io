@@ -1,0 +1,15 @@
+@import '../../common.scss';
+ul.NavList {
+    display: flex;
+    flex-direction: row;
+    
+    li {
+        list-style-type: none;
+        margin-right: 2em;
+    }
+}
+@media only screen and (min-width: $width-tablet) {
+ul.NavList {
+    text-align: center;
+}
+}

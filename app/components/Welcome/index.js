@@ -1,6 +1,5 @@
 const React = require('react');
 const { Picture } = require('../Picture');
-const { Nav } = require('../Nav');
 const { Card } = require('../Card');
 const { Contact } = require('../Contact');
 
@@ -13,7 +12,17 @@ export class Welcome extends React.Component {
                     <div id="cName">
                         <h1>Ben Zhao</h1>
                         <div className="hBar"></div>
-                        <Nav />
+                        <ul>
+                            <li>
+                                <a href="https://www.github.com/wenbenz">Github</a>
+                            </li>
+                            <li>
+                                <a href="https://ca.linkedin.com/in/wenbinzhao">LinkedIn</a>
+                            </li>
+                            <li>
+                                <a href="files/resume.pdf">Resume</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <br />

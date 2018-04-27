@@ -1,19 +1,23 @@
 const React = require('react');
+const { Styles } = require('./style.scss');
 
 export class Nav extends React.Component {
     render() {
         return (
-            <ul>
+            < ul className='NavList' style={this.props.style} >
                 <li>
-                    <a href="https://www.github.com/wenbenz">Github</a>
+                    <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="https://ca.linkedin.com/in/wenbinzhao">LinkedIn</a>
+                    <a href="/experiences">Experiences</a>
                 </li>
                 <li>
-                    <a href="files/resume.pdf">Resume</a>
+                    <a href="/projects">Projects</a>
                 </li>
-            </ul>
+                <li>
+                    <a href="/files/resume.pdf">Resume</a>
+                </li>
+            </ul >
 
         );
     }

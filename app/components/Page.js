@@ -2,6 +2,7 @@ const React = require('react');
 const { Card } = require('./Card');
 const { Contact } = require('./Contact');
 const { Welcome } = require('./Welcome');
+const { Nav } = require('./Nav');
 const { Experience } = require('./Experience');
 const { Footer } = require('./Footer');
 const styles = {
@@ -42,17 +43,11 @@ const experiences = {
 }
 
 export class Page extends React.Component {
-    render() {
-        if (this.props.page == 'home')
-            return this.home();
-    }
+
     home() {
-        var expStyle = {
-            width: '40%',
-        }
-        function listAnchor(id, aName = false) {
+        function arrayToListItems(id, aName = false) {
             const aref = aName ? aName : id;
-            return (<li key={aref.toString()}><a href={aref}>{id[0].toUpperCase() + id.slice(1).toLowerCase()}</a></li>)
+            return (<li key={aref.toString()}><a href={'#/' + aref}>{id[0].toUpperCase() + id.slice(1).toLowerCase()}</a></li>)
         }
         return (
             <div>
@@ -62,23 +57,47 @@ export class Page extends React.Component {
                     <h4>Wanna know more?</h4>
                     <h5>Find out more about my</h5>
                     <ul>
-                        {['experiences', 'projects'].map(s => listAnchor(s))}
+                        {['experiences', 'projects'].map(s => arrayToListItems(s))}
                     </ul>
                 </Card></section>
 
-                {/* <section id='experiences'>
-                    <h2>Experiences</h2>
+                <Footer />
+            </div >
+        );
+    }
+
+    experiences() {
+        var expStyle = {
+            width: '40%',
+        }
+        return (
+            <div>
+                <header>
+                    <section>
+                        <h1>Experiences</h1>
+                        <Nav pre=">" />
+                    </section>
+                </header>
+
+                <section id='experiences'>
                     <Card img="img/imagine.png" imgStyle={expStyle}>
                         <Experience experience={experiences.Imagine} />
                     </Card>
                     <Card img="img/asiapalace.jpg" imgStyle={expStyle}>
                         <Experience experience={experiences["Asia Palace"]} />
                     </Card>
-                </section> */}
-
+                </section>
 
                 <Footer />
-            </div >
+            </div>
         );
     }
+
+    render() {
+        switch (this.props.page) {
+            case 'home': return this.home();
+            case 'experiences': return this.experiences();
+        }
+    }
+
 }
