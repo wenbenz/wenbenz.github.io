@@ -53,7 +53,7 @@ export class Project extends React.Component {
         return (
             <div>
                 <h4>{this.props.name}</h4>
-                {this.props.link && <a href={this.props.link}>(Click here to it out!)</a>}
+                {this.props.link && <a href={this.props.link}>(Click here to check it out!)</a>}
                 <ul>{jsx.arrayToList(this.props.points)}</ul>
             </div>
         );
