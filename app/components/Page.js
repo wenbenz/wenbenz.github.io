@@ -1,4 +1,4 @@
-import { Experiences } from './Experience';
+import { Experiences, Projects } from './Experience';
 
 const React = require('react');
 const { Card } = require('./Card');
@@ -46,38 +46,53 @@ const experiences = [
     }
 ]
 
-const projects = {
-    "Hangman AI": [
-        "Created a hangman game using AngularJS which stored a database of words entered as words to guess.",
-        "Developed an algorithm to determine the most likely letter to appear based on length of given word, letter frequency, and word use frequency.",
-        "Bot undefeatable with greater - than - 3 letter words after populating database with 20K words."
-    ],
-    "NotePadd": [
-        "Developed a web - based application by implementing JavaScript to parse English text.",
-        "Created a detailed plan by dividing and assigning tasks in manageable chunks.",
-        "Created musical rhythms and flows by analyzing and interpreting sentences and word lengths.",
-        "Mapped notes to syllables in iambic pentameter to create musical melodies.",
-        "Designed and fabricated an intuitive, functional, and visually appealing user interface using Materialize CSS."
-    ],
-    "WatRGoose": [
-        "Developed and published an Android application with a small team in the time span of 12 hours, being the only team to demo a project.",
-        "Collaboratively learned to use the Android Studio IDE and set up testing devices.",
-        "Kept a lighthearted and enthusiastic atmosphere in the team.",
-        "Experienced the process of publishing, updating, and fixing bugs across multiple devices."
-    ],
-    "Robotics Team": [
-        "Designed a robot through collaboration with a team of young engineers.",
-        "Won award for best chassis by excellent use of CAD.",
-        "Fabricated robot and controls using Arduino."
-    ],
-    "SHAD Entrepreneurship Cup": [
-        "Collaboratively invented an innovative product to solve a novel societal problem.",
-        "Pitched product to a panel of seasoned professionals and entrepreneurs.",
-        "Created a business plan outlining the future growth of the company.",
-        "Prototype and presented a sample product.",
-        "Won first place for product and pitch in our region."
-    ]
-}
+const projects = [
+    {
+        name: "Hangman AI",
+        points: [
+            "Created a hangman game using AngularJS which stored a database of words entered as words to guess.",
+            "Developed an algorithm to determine the most likely letter to appear based on length of given word, letter frequency, and word use frequency.",
+            "Bot undefeatable with greater - than - 3 letter words after populating database with 20K words."
+        ]
+    },
+    {
+        name: "NotePadd",
+        points: [
+            "Developed a web - based application by implementing JavaScript to parse English text.",
+            "Created a detailed plan by dividing and assigning tasks in manageable chunks.",
+            "Created musical rhythms and flows by analyzing and interpreting sentences and word lengths.",
+            "Mapped notes to syllables in iambic pentameter to create musical melodies.",
+            "Designed and fabricated an intuitive, functional, and visually appealing user interface using Materialize CSS."
+        ]
+    },
+    {
+        name: "WatRGoose",
+        points: [
+            "Developed and published an Android application with a small team in the time span of 12 hours, being the only team to demo a project.",
+            "Collaboratively learned to use the Android Studio IDE and set up testing devices.",
+            "Kept a lighthearted and enthusiastic atmosphere in the team.",
+            "Experienced the process of publishing, updating, and fixing bugs across multiple devices."
+        ]
+    },
+    {
+        name: "Robotics Team",
+        points: [
+            "Designed a robot through collaboration with a team of young engineers.",
+            "Won award for best chassis by excellent use of CAD.",
+            "Fabricated robot and controls using Arduino."
+        ]
+    },
+    {
+        name: "SHAD Entrepreneurship Cup",
+        points: [
+            "Collaboratively invented an innovative product to solve a novel societal problem.",
+            "Pitched product to a panel of seasoned professionals and entrepreneurs.",
+            "Created a business plan outlining the future growth of the company.",
+            "Prototype and presented a sample product.",
+            "Won first place for product and pitch in our region."
+        ]
+    }
+]
 
 export class Page extends React.Component {
 
@@ -130,15 +145,6 @@ export class Page extends React.Component {
     }
 
     projects() {
-
-        let cards = [];
-        for (const key of Object.keys(projects))
-            cards.push(
-                <Card>
-                    <h4>{key}</h4>
-                    <ul>{projects[key].map(e => <li key={e.toString()} className="circleBullet">{e}</li>)}</ul>
-                </Card>
-            )
         return (
             <div>
                 <header>
@@ -149,7 +155,7 @@ export class Page extends React.Component {
                 </header>
 
                 <section id='Projects'>
-                    {cards}
+                    <Projects projects={projects} />
                 </section>
 
                 <Footer />

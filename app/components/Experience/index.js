@@ -30,13 +30,13 @@ export class Experience extends React.Component {
 export class Experiences extends React.Component {
     render() {
         const exps = [];
-        this.props.experiences.forEach((experience, i) => {
+        this.props.experiences.forEach((experience, i) =>
             exps.push(
-                <Card img={experience.logo} imgStyle={{ width: '40%' }}>
+                <Card key={i} img={experience.logo} imgStyle={{ width: '40%' }}>
                     <Experience {...experience} />
                 </Card>
-            );
-        });
+            )
+        );
         return exps;
     }
 }
@@ -46,14 +46,29 @@ export class Project extends React.Component {
      * A project has the following properties:
      *  name
      *  date?
-     *  link
+     *  link?
      *  points
      */
     render() {
         return (
             <div>
                 <h4>{this.props.name}</h4>
+                <ul>{jsx.arrayToList(this.props.points)}</ul>
             </div>
         );
+    }
+}
+
+export class Projects extends React.Component {
+    render() {
+        const projects = [];
+        this.props.projects.forEach((project, i) =>
+            projects.push(
+                <Card key={i}>
+                    <Project {...project} />
+                </ Card>
+            )
+        );
+        return projects;
     }
 }
