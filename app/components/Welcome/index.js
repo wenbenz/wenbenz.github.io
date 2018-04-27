@@ -16,6 +16,7 @@ export class Welcome extends React.Component {
                         <Nav />
                     </div>
                 </div>
+                <br />
                 <section>
                     <Card style={{ textAlign: "left", background: "#374349" }}>
                         <h4>Hi!</h4>

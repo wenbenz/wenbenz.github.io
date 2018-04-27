@@ -43,13 +43,16 @@ const experiences = {
 
 export class Page extends React.Component {
     render() {
+        if (this.props.page == 'home')
+            return this.home();
+    }
+    home() {
         var expStyle = {
             width: '40%',
         }
         function listAnchor(id, aName = false) {
             const aref = aName ? aName : id;
-            console.log(aref, aName, id)
-            return (<li><a href={'#' + aref}>{id[0].toUpperCase() + id.slice(1).toLowerCase()}</a></li>)
+            return (<li key={aref.toString()}><a href={aref}>{id[0].toUpperCase() + id.slice(1).toLowerCase()}</a></li>)
         }
         return (
             <div>
