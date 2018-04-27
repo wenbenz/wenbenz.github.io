@@ -2,7 +2,7 @@ const React = require('react');
 import './style.scss';
 export class Experience extends React.Component {
     arrayToList(array) {
-        return array.map(a => <li>{a}</li>);
+        return array.map((a, i) => <li key={i} className="circleBullet">{a}</li>);
     }
     render() {
         let exp = this.props.experience;

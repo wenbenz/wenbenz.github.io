@@ -2,6 +2,7 @@ const React = require('react');
 const { Card } = require('./Card');
 const { Contact } = require('./Contact');
 const { Welcome } = require('./Welcome');
+const { Nav } = require('./Nav');
 const { Experience } = require('./Experience');
 const { Footer } = require('./Footer');
 const styles = {
@@ -41,15 +42,49 @@ const experiences = {
     }
 }
 
+const projects = {
+    "Hangman AI": [
+        "Created a hangman game using AngularJS which stored a database of words entered as words to guess.",
+        "Developed an algorithm to determine the most likely letter to appear based on length of given word, letter frequency, and word use frequency.",
+        "Bot undefeatable with greater - than - 3 letter words after populating database with 20K words."
+    ],
+    "NotePadd": [
+        "Developed a web - based application by implementing JavaScript to parse English text.",
+        "Created a detailed plan by dividing and assigning tasks in manageable chunks.",
+        "Created musical rhythms and flows by analyzing and interpreting sentences and word lengths.",
+        "Mapped notes to syllables in iambic pentameter to create musical melodies.",
+        "Designed and fabricated an intuitive, functional, and visually appealing user interface using Materialize CSS."
+    ],
+    "WatRGoose": [
+        "Developed and published an Android application with a small team in the time span of 12 hours, being the only team to demo a project.",
+        "Collaboratively learned to use the Android Studio IDE and set up testing devices.",
+        "Kept a lighthearted and enthusiastic atmosphere in the team.",
+        "Experienced the process of publishing, updating, and fixing bugs across multiple devices."
+    ],
+    "Robotics Team": [
+        "Designed a robot through collaboration with a team of young engineers.",
+        "Won award for best chassis by excellent use of CAD.",
+        "Fabricated robot and controls using Arduino."
+    ],
+    "SHAD Entrepreneurship Cup": [
+        "Collaboratively invented an innovative product to solve a novel societal problem.",
+        "Pitched product to a panel of seasoned professionals and entrepreneurs.",
+        "Created a business plan outlining the future growth of the company.",
+        "Prototype and presented a sample product.",
+        "Won first place for product and pitch in our region."
+    ]
+}
+
 export class Page extends React.Component {
-    render() {
-        var expStyle = {
-            width: '40%',
-        }
-        function listAnchor(id, aName = false) {
+
+    arrayToListItems(a) {
+        a.map(e => <li>{e}</li>)
+    }
+
+    home() {
+        function arrayToListItems(id, aName = false) {
             const aref = aName ? aName : id;
-            console.log(aref, aName, id)
-            return (<li><a href={'#' + aref}>{id[0].toUpperCase() + id.slice(1).toLowerCase()}</a></li>)
+            return (<li key={aref.toString()}><a href={__dirname + '#/' + aref}>{id[0].toUpperCase() + id.slice(1).toLowerCase()}</a></li>)
         }
         return (
             <div>
@@ -59,23 +94,81 @@ export class Page extends React.Component {
                     <h4>Wanna know more?</h4>
                     <h5>Find out more about my</h5>
                     <ul>
-                        {['experiences', 'projects'].map(s => listAnchor(s))}
+                        {['experiences', 'projects'].map(s => arrayToListItems(s))}
                     </ul>
                 </Card></section>
 
-                {/* <section id='experiences'>
-                    <h2>Experiences</h2>
+                <Footer />
+            </div >
+        );
+    }
+
+    experiences() {
+        var expStyle = {
+            width: '40%',
+        }
+        return (
+            <div>
+                <header>
+                    <section>
+                        <h1>Experiences</h1>
+                        <Nav />
+                    </section>
+                </header>
+
+                <section id='experiences'>
                     <Card img="img/imagine.png" imgStyle={expStyle}>
                         <Experience experience={experiences.Imagine} />
                     </Card>
                     <Card img="img/asiapalace.jpg" imgStyle={expStyle}>
                         <Experience experience={experiences["Asia Palace"]} />
                     </Card>
-                </section> */}
-
+                </section>
 
                 <Footer />
-            </div >
+            </div>
         );
     }
+
+    genProjects() {
+        let cards = [];
+        for (const key of Object.keys(projects))
+            cards.push(
+                <Card>
+                    <h4>{key}</h4>
+                    <ul>{projects[key].map(e => <li key={e.toString()} className="circleBullet">{e}</li>)}</ul>
+                </Card>
+            )
+        return cards;
+    }
+    projects() {
+
+        return (
+            <div>
+                <header>
+                    <section>
+                        <h1>Projects</h1>
+                        <Nav />
+                    </section>
+                </header>
+
+                <section id='Projects'>
+                    {
+                        this.genProjects()
+                    }
+                </section>
+
+                <Footer />
+            </div>
+        );
+    }
+
+    render() {
+        switch (this.props.page) {
+            case 'home': return this.home();
+            case 'experiences': return this.experiences();
+            case 'projects': return this.projects();
+        }
+    }
+
 }
