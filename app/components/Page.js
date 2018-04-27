@@ -42,12 +42,49 @@ const experiences = {
     }
 }
 
+const projects = {
+    "Hangman AI": [
+        "Created a hangman game using AngularJS which stored a database of words entered as words to guess.",
+        "Developed an algorithm to determine the most likely letter to appear based on length of given word, letter frequency, and word use frequency.",
+        "Bot undefeatable with greater - than - 3 letter words after populating database with 20K words."
+    ],
+    "NotePadd": [
+        "Developed a web - based application by implementing JavaScript to parse English text.",
+        "Created a detailed plan by dividing and assigning tasks in manageable chunks.",
+        "Created musical rhythms and flows by analyzing and interpreting sentences and word lengths.",
+        "Mapped notes to syllables in iambic pentameter to create musical melodies.",
+        "Designed and fabricated an intuitive, functional, and visually appealing user interface using Materialize CSS."
+    ],
+    "WatRGoose": [
+        "Developed and published an Android application with a small team in the time span of 12 hours, being the only team to demo a project.",
+        "Collaboratively learned to use the Android Studio IDE and set up testing devices.",
+        "Kept a lighthearted and enthusiastic atmosphere in the team.",
+        "Experienced the process of publishing, updating, and fixing bugs across multiple devices."
+    ],
+    "Robotics Team": [
+        "Designed a robot through collaboration with a team of young engineers.",
+        "Won award for best chassis by excellent use of CAD.",
+        "Fabricated robot and controls using Arduino."
+    ],
+    "SHAD Entrepreneurship Cup": [
+        "Collaboratively invented an innovative product to solve a novel societal problem.",
+        "Pitched product to a panel of seasoned professionals and entrepreneurs.",
+        "Created a business plan outlining the future growth of the company.",
+        "Prototype and presented a sample product.",
+        "Won first place for product and pitch in our region."
+    ]
+}
+
 export class Page extends React.Component {
+
+    arrayToListItems(a) {
+        a.map(e => <li>{e}</li>)
+    }
 
     home() {
         function arrayToListItems(id, aName = false) {
             const aref = aName ? aName : id;
-            return (<li key={aref.toString()}><a href={'#/' + aref}>{id[0].toUpperCase() + id.slice(1).toLowerCase()}</a></li>)
+            return (<li key={aref.toString()}><a href={__dirname + '#/' + aref}>{id[0].toUpperCase() + id.slice(1).toLowerCase()}</a></li>)
         }
         return (
             <div>
@@ -75,7 +112,7 @@ export class Page extends React.Component {
                 <header>
                     <section>
                         <h1>Experiences</h1>
-                        <Nav pre=">" />
+                        <Nav />
                     </section>
                 </header>
 
@@ -93,10 +130,44 @@ export class Page extends React.Component {
         );
     }
 
+    genProjects() {
+        let cards = [];
+        for (const key of Object.keys(projects))
+            cards.push(
+                <Card>
+                    <h4>{key}</h4>
+                    <ul>{projects[key].map(e => <li key={e.toString()} className="circleBullet">{e}</li>)}</ul>
+                </Card>
+            )
+        return cards;
+    }
+    projects() {
+
+        return (
+            <div>
+                <header>
+                    <section>
+                        <h1>Projects</h1>
+                        <Nav />
+                    </section>
+                </header>
+
+                <section id='Projects'>
+                    {
+                        this.genProjects()
+                    }
+                </section>
+
+                <Footer />
+            </div>
+        );
+    }
+
     render() {
         switch (this.props.page) {
             case 'home': return this.home();
             case 'experiences': return this.experiences();
+            case 'projects': return this.projects();
         }
     }
 

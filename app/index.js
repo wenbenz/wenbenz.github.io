@@ -9,6 +9,7 @@ ReactDOM.render(
     <HashRouter>
         <Switch>
             <Route path="/experiences" render={() => <Page page="experiences" />} />
+            <Route path="/projects" render={() => <Page page="projects" />} />
             <Route path="/" render={() => <Page page="home" />} />
         </Switch>
     </HashRouter>,

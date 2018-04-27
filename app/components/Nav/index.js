@@ -9,10 +9,10 @@ export class Nav extends React.Component {
                     <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="/experiences">Experiences</a>
+                    <a href="/#/experiences">Experiences</a>
                 </li>
                 <li>
-                    <a href="/projects">Projects</a>
+                    <a href="/#/projects">Projects</a>
                 </li>
                 <li>
                     <a href="/files/resume.pdf">Resume</a>
