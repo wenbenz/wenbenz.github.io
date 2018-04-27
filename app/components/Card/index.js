@@ -11,7 +11,7 @@ export class Card extends React.Component {
                         </div>
                     )
                 }
-                <div>
+                <div style={this.props.style}>
                     {this.props.children}
                 </div>
             </div>

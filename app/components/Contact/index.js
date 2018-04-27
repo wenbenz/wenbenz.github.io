@@ -6,9 +6,7 @@ export class Contact extends React.Component {
         if (this.props.type === 'email')
             value = <a href={'mailto:' + this.props.value}>{this.props.value}</a>;
         return (
-            <div className='contact'>
-                <b>{this.props.type}: </b>{value}
-            </div>
+            <div class="contact">{this.props.type + ": "}{value}</div>
         );
     }
 }
