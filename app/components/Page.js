@@ -57,6 +57,7 @@ const projects = [
     },
     {
         name: "NotePadd",
+        link: "https://notepadd.herokuapp.com/",
         points: [
             "Developed a web - based application by implementing JavaScript to parse English text.",
             "Created a detailed plan by dividing and assigning tasks in manageable chunks.",
@@ -67,6 +68,7 @@ const projects = [
     },
     {
         name: "WatRGoose",
+        link: "https://play.google.com/store/apps/details?id=com.wenbinzhao.localhax",
         points: [
             "Developed and published an Android application with a small team in the time span of 12 hours, being the only team to demo a project.",
             "Collaboratively learned to use the Android Studio IDE and set up testing devices.",
