@@ -1,19 +1,75 @@
 const React = require('react');
+const jsx = require('./../jsxToolkit');
+const { Card } = require('./../Card')
 import './style.scss';
+
 export class Experience extends React.Component {
-    arrayToList(array) {
-        return array.map((a, i) => <li key={i} className="circleBullet">{a}</li>);
-    }
+    /**
+     * A work experience has the following properties:
+     *  company
+     *  position?
+     *  logo?
+     *  start date
+     *  end date? (only optional because present)
+     *  points
+     */
     render() {
-        let exp = this.props.experience;
+        const exp = this.props.experience;
         return (
             <div>
-                <h4><b>{exp.title}</b>{(exp.position ? "-" + exp.position : "")}</h4>
-                <span className='date'>{exp.startDate + "-" + (exp.endDate || "Present")}</span>
+                <h4><b>{this.props.company}</b>{(this.props.position ? "-" + this.props.position : "")}</h4>
+                <span className='date'>{this.props.startDate + "-" + (this.props.endDate || "Present")}</span>
                 <ul>
-                    {this.arrayToList(exp.points)}
+                    {jsx.arrayToList(this.props.points)}
                 </ul>
             </div>
         )
+    }
+}
+
+export class Experiences extends React.Component {
+    render() {
+        const exps = [];
+        this.props.experiences.forEach((experience, i) =>
+            exps.push(
+                <Card key={i} img={experience.logo} imgStyle={{ width: '40%' }}>
+                    <Experience {...experience} />
+                </Card>
+            )
+        );
+        return exps;
+    }
+}
+
+export class Project extends React.Component {
+    /**
+     * A project has the following properties:
+     *  name
+     *  date?
+     *  link?
+     *  points
+     */
+    render() {
+        return (
+            <div>
+                <h4>{this.props.name}</h4>
+                {this.props.link && <a href={this.props.link}>(Click here to it out!)</a>}
+                <ul>{jsx.arrayToList(this.props.points)}</ul>
+            </div>
+        );
+    }
+}
+
+export class Projects extends React.Component {
+    render() {
+        const projects = [];
+        this.props.projects.forEach((project, i) =>
+            projects.push(
+                <Card key={i}>
+                    <Project {...project} />
+                </ Card>
+            )
+        );
+        return projects;
     }
 }
