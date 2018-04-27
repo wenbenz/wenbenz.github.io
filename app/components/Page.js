@@ -1,3 +1,5 @@
+import { Experiences } from './Experience';
+
 const React = require('react');
 const { Card } = require('./Card');
 const { Contact } = require('./Contact');
@@ -12,9 +14,10 @@ const styles = {
     }
 }
 
-const experiences = {
-    "Imagine": {
-        title: "Imagine Communications",
+const experiences = [
+    {
+        company: "Imagine Communications",
+        logo: "img/imagine.png",
         position: "Full Stack Developer",
         startDate: "September 2017",
         endDate: "December 2017",
@@ -26,8 +29,9 @@ const experiences = {
             "Automated stylesheet generation for icons using Node.JS to enable exporting company icons as a reusable package"
         ]
     },
-    "Asia Palace": {
-        title: "Asia Palace Restaurant",
+    {
+        company: "Asia Palace Restaurant",
+        logo: "img/asiapalace.jpg",
         position: "IT and Manager",
         startDate: "January 2016",
         endDate: "September 2016",
@@ -40,7 +44,7 @@ const experiences = {
             "Obtained necessary permits for the establishment of the restaurant."
         ]
     }
-}
+]
 
 const projects = {
     "Hangman AI": [
@@ -117,12 +121,7 @@ export class Page extends React.Component {
                 </header>
 
                 <section id='experiences'>
-                    <Card img="img/imagine.png" imgStyle={expStyle}>
-                        <Experience experience={experiences.Imagine} />
-                    </Card>
-                    <Card img="img/asiapalace.jpg" imgStyle={expStyle}>
-                        <Experience experience={experiences["Asia Palace"]} />
-                    </Card>
+                    <Experiences experiences={experiences} />
                 </section>
 
                 <Footer />
@@ -130,7 +129,8 @@ export class Page extends React.Component {
         );
     }
 
-    genProjects() {
+    projects() {
+
         let cards = [];
         for (const key of Object.keys(projects))
             cards.push(
@@ -139,10 +139,6 @@ export class Page extends React.Component {
                     <ul>{projects[key].map(e => <li key={e.toString()} className="circleBullet">{e}</li>)}</ul>
                 </Card>
             )
-        return cards;
-    }
-    projects() {
-
         return (
             <div>
                 <header>
@@ -153,9 +149,7 @@ export class Page extends React.Component {
                 </header>
 
                 <section id='Projects'>
-                    {
-                        this.genProjects()
-                    }
+                    {cards}
                 </section>
 
                 <Footer />
