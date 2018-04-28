@@ -1,11 +1,12 @@
 # wenbenz.github.io
 
 See WIP at https://wip.wenbinzhao.com/
+
 Todo:
-[] Put all common variables in SCSS into one file
-[] Break down/distribute monolithic SCSS file to smaller files
-[x] Break down pages into individual pages
-[] Make code readable
+- [] Put all common variables in SCSS into one file
+- [] Break down/distribute monolithic SCSS file to smaller files
+- [x] Break down pages into individual pages
+- [] Make code readable
 
 
 3.0 (Current WIP)
