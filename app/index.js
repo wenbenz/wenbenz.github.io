@@ -1,5 +1,5 @@
 import { ExperiencesPage } from './pages/ExperiencesPage';
-import { ProjectsPage } from './pages/Page.2';
+import { ProjectsPage } from './pages/ProjectsPage';
 
 const React = require('react');
 const ReactDOM = require('react-dom');

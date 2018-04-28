@@ -5,7 +5,7 @@ const { Card } = require('../components/Card');
 const { Nav } = require('../components/Nav');
 const { Projects } = require('../components/Experience');
 
-const projects = require('../projects.json');
+const projects = require('./projects.json');
 
 export class ProjectsPage extends React.Component {
     render() {
