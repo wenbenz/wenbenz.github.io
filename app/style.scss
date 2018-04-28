@@ -1,4 +1,4 @@
-@import 'common.scss';
+@import 'styles/common.scss';
 
 html {
   border: 0;
@@ -86,7 +86,7 @@ header {
     display: block;
     text-align: center;
   }
-  [component="card"]{
+  [component='card']{
     background: $blueGreyDarkPop;
   }
   color: $default-color;
