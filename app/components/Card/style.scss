@@ -27,8 +27,8 @@
     display: block;
     padding: 25px;
     margin: auto;
+    text-align: left;
   }
-  li.circleBullet{ list-style-type: circle;}
 }
 
 @media only screen and (min-width: $width-tablet) {

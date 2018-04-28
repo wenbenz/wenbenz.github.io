@@ -1,8 +1,10 @@
-$width-tablet: 768px;
-$width-full: 1224px;
+@import 'colors.scss';
+@import 'shadows.scss';
+@import 'widths.scss';
 
-.componentShadow{
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
-              0 1px 10px 0 rgba(0, 0, 0, 0.12),
-              0 2px 4px -1px rgba(0, 0, 0, 0.3);
-}
+/* Defaults */
+
+$default-color-bright: $lightBlue3;
+$default-color-dark: $darkGrey;
+$default-color: $blueGreyLight;
+$default-width: calc(100% - 20px);
