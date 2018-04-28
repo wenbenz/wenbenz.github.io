@@ -1,0 +1,31 @@
+[
+    {
+        "company": "Imagine Communications",
+        "logo": "img/imagine.png",
+        "position": "Full Stack Developer",
+        "startDate": "September 2017",
+        "endDate": "December 2017",
+        "points": [
+            "Changed code to be asynchronous to increase responsiveness of UI by 800%.",
+            "Implemented UI features to impress and secure a major clientele in demo.",
+            "Created a new service to address a class of bugs and prevent future ones.",
+            "Developed reusable and customizable components to accelerate UI development and create uniformity and cohesion.",
+            "Automated stylesheet generation for icons using Node.JS to enable exporting company icons as a reusable package"
+        ]
+    },
+    {
+        "company": "Asia Palace Restaurant",
+        "logo": "img/asiapalace.jpg",
+        "position": "IT and Manager",
+        "startDate": "January 2016",
+        "endDate": "September 2016",
+        "points": [
+            " Programmed and installed a point-of-sale system to save company over $2000 and to provide more efficient service and analytics.",
+            "Exercised strong communication and organization skills to optimize daily operations and mediate conflicts.",
+            "Provided excellent service to establish the “best[Chinese restaurant] in Regina”.",
+            "Maintained company image by providing excellent customer care.",
+            "Designing and printing menus and other media, advertising, and maintained presence in social media.",
+            "Obtained necessary permits for the establishment of the restaurant."
+        ]
+    }
+]
