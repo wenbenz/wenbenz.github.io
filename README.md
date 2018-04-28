@@ -1,6 +1,6 @@
 # wenbenz.github.io
 
-Take a look at the WIP build at https://wipwenbinzhao.netlify.com/
+Take a look at the WIP build at https://wip.wenbinzhao.com
 
 3.0 (Current WIP)
 Break website down into components using a JS Framework. Has been nuked and reset over 3 times now due to project structuring, and framework+tools indecision.
