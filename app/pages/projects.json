@@ -29,11 +29,26 @@
         ]
     },
     {
+        "name": "PackAnts",
+        "points": [
+            "Created a beautiful platform interface using HTML, CSS, ReactJS, JQuery, and Git.",
+            "Applied visual design skills to overhaul the existing UI."
+        ]
+    },
+    {
         "name": "Robotics Team",
         "points": [
             "Designed a robot through collaboration with a team of young engineers.",
             "Won award for best chassis by excellent use of CAD.",
             "Fabricated robot and controls using Arduino."
+        ]
+    },
+    {
+        "name": "Loe Designs - A Junior Achievement Company",
+        "points": [
+            "Created a screen-printing company with partners by identifying supply and demand and exercising skills in resource management, budgeting, and advertising.",
+            "Mediated conflict and oversaw production.",
+            "Discussed executive decisions with colleagues."
         ]
     },
     {
