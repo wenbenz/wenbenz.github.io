@@ -2,9 +2,9 @@
 
 Take a look at the WIP build at https://wip.wenbinzhao.com
 
-Todo:
-- [ ] Put all common variables in SCSS into one file
-- [ ] Break down/distribute monolithic SCSS file to smaller files
+Recently done:
+- [x] Put all common variables in SCSS into one file
+- [x] Break down/distribute monolithic SCSS file to smaller files
 - [x] Break down pages into individual pages
 
 3.0 (Current WIP)
