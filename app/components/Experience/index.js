@@ -1,5 +1,5 @@
 const React = require('react');
-const jsx = require('./../jsxToolkit');
+const jsx = require('./../../jsxToolkit');
 const { Card } = require('./../Card')
 import './style.scss';
 
