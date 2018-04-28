@@ -1,6 +1,6 @@
 # wenbenz.github.io
 
-See WIP at https://wip.wenbinzhao.com/
+Take a look at the WIP build at https://wip.wenbinzhao.com
 
 Todo:
 - [ ] Put all common variables in SCSS into one file
