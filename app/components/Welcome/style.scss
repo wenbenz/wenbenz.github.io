@@ -1,0 +1,145 @@
+@import '../../styles/common.scss';
+
+$ring-background-color: $invis;
+$inner-ring-color:$blueGreyMed;
+$outer-ring-color:$darkOrange3;
+
+#rings {
+  border-width: 0;
+  display: inline-flex;
+  line-height: 0;
+  background-color: $ring-background-color;
+}
+
+#cImg {
+  width: 225px;
+  height: 225px;
+  overflow: hidden;
+  border: solid 5px $lightBlue3;
+  justify-content: center;
+  img {
+    max-width: 100%;
+    width: auto;
+  }
+}
+
+#cName {
+  width: 500px;
+  padding: 20px;
+  display: block;
+  ul {
+    padding: 0 0 0 10px;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    li {
+      margin-right: 20px;
+    }
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: $width-tablet) {
+  #cName {
+    width: calc(100% - 80px);
+    text-align: center;
+    ul {
+      display: block;
+      li {
+        padding: 20px 0;
+      }
+    }
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: $width-tablet) {
+  .animationset1 {
+    animation: growIn 1.5s;
+  }
+  #rings {
+    padding: 10px;
+    border: solid 3px $outer-ring-color;
+    border-top-color: $invis;
+    border-bottom-color: $invis;
+    animation: spin 2s 2;
+    div {
+      border: solid 30px $inner-ring-color;
+      border-left-color: $invis;
+      border-right-color: $invis;
+      animation: nSpin 1s 3;
+      div {
+        animation: spin 1s 3;
+        border: 0;
+        div {
+          animation: nSpin 2s 2;
+        }
+      }
+    }
+    #cImg {
+      border: solid 5px $lightBlue3;
+    }
+  }
+  #cName {
+    transform: scale(0);
+    animation: growIn 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    ul {
+      justify-content: center;
+      opacity: 0;
+      transform: scale(0);
+      animation: growIn 1s, appear 2s;
+      animation-delay: 1.5s, 2s;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+/* Laptop */
+@media only screen and (min-width: $width-full) {
+    #cName {
+    text-align: left;
+    ul {
+      justify-content: flex-start;
+    }
+  }
+}
+
+
+/* Animations */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes nSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes growIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

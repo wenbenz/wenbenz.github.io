@@ -1,0 +1,10 @@
+@import 'colors.scss';
+@import 'shadows.scss';
+@import 'widths.scss';
+
+/* Defaults */
+
+$default-color-bright: $lightBlue3;
+$default-color-dark: $darkGrey;
+$default-color: $blueGreyLight;
+$default-width: calc(100% - 20px);

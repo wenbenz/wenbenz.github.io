@@ -1,4 +1,4 @@
-@import '../../common.scss';
+@import '../../styles/common.scss';
 [component='card'] {
   @extend .componentShadow;
   border-radius: 2px;
@@ -27,8 +27,8 @@
     display: block;
     padding: 25px;
     margin: auto;
+    text-align: left;
   }
-  li.circleBullet{ list-style-type: circle;}
 }
 
 @media only screen and (min-width: $width-tablet) {
