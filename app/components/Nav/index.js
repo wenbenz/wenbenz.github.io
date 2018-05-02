@@ -1,10 +1,12 @@
+import { toTop } from '../../jsxToolkit';
+
 const React = require('react');
 const { Styles } = require('./style.scss');
 
 export class Nav extends React.Component {
     render() {
         return (
-            < ul className='NavList' style={this.props.style} >
+            < ul className='NavList' style={this.props.style} onClick={toTop}>
                 <li>
                     <a href="/">Home</a>
                 </li>

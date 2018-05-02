@@ -20,7 +20,7 @@ export class Home extends React.Component {
                 <section><Card>
                     <h4>Wanna know more?</h4>
                     <h5>Find out more about my</h5>
-                    <ul>
+                    <ul onClick={jsx.toTop}>
                         {['experiences', 'projects'].map(s => arrayToListItems(s))}
                     </ul>
                 </Card></section>
