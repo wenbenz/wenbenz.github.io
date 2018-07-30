@@ -1,5 +1,18 @@
 [
     {
+        "company": "Acronym Software",
+        "position": "C++ Developer ",
+        "startDate": "May 2018",
+        "endDate": "August 2018",
+        "points": [
+            "Added a new class of calculations for civil engineering and design.",
+            "Designed new data structures extending existing ones to store essential data for new calculations.",
+            "Increased efficiency and readability by reorganizing code to be more modular and reusable.",
+            "Modified complex calculations to integrate new features into upcoming software release.",
+            "Debugged, tested, and shipped beta versions of software to client to demonstrate new functionalities and receive feedback for further improvement."
+        ]
+    },
+    {
         "company": "Imagine Communications",
         "logo": "img/imagine.png",
         "position": "Full Stack Developer",
