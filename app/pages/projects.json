@@ -39,7 +39,7 @@
         "name": "Robotics Team",
         "points": [
             "Designed a robot using Arduino and CAD in collaboration with a team of young engineers.",
-            "Implemented algorithms to read and play audio encoded in visual strip and make robot follow a path.",
+            "Implemented algorithms to make robot follow a strip which encodes audio, then play the audio encoded.",
             "Won award for best chassis through excellent use of CAD and plasma cutting technology."
         ]
     },
