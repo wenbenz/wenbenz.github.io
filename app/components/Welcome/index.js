@@ -31,7 +31,19 @@ export class Welcome extends React.Component {
                 <section>
                     <Card>
                         <h4>Hi!</h4>
-                        <p>I'm Ben. I'm a Computer Science student at the University of Waterloo enrolled in the co-op program. My passion lies in software development and problem solving, but I also love exploring new environments, meeting new and interesting people, and enjoy performing arts! In my free time, I like to dance, build side projects, and try new things with friends. Professionally, I am looking for new experiences and opportunities to learn in different industries. I am looking for a co-operative work term placement for Winter 2019 (January to April).</p>
+                        <p>
+                            I'm Ben, a Computer Science co-op student at the University of Waterloo. I'm in my 4A term seeking employment for the spring term (May to August 2020). You can find my resume <a href="files/resume.pdf">here</a>.
+                        </p>
+
+                        <h4>What can I do?</h4>
+                        <p>
+                            Throughout my academic and professional career, I have gained experience working with a plethora of different languages, frameworks, paradigms, and technologies, so I can work in any modern development environment. I'm capable of quickly adapting and learning new technologies to work with your company's existing code and tackle any new challenges.
+                        </p>
+
+                        <h4>So what am I like?</h4>
+                        <p>
+                            I'd describe myself as an active and sociable person. In my free time I dance, rock climb, hike, swim, and skate (I suck at the latter two, but I still enjoy it). I also enjoy boardgames, Dungeons and Dragons, and in general just hanging out with people. I'm also very open-minded and I love trying new things :)
+                        </p>
                     </Card>
                     <Card>
                         <h4>Send me a message!</h4>
