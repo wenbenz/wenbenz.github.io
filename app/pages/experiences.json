@@ -1,5 +1,31 @@
 [
     {
+        "company": "Arctic Wolf Networks",
+        "position": "Software Engineering - Risk Platform",
+        "startDate": "September 2019",
+        "endDate": "December 2019",
+        "points": [
+            "Developed linux version of multi-platform agent in Go which monitors and audits computer activity.",
+            "Used Docker and Make to automate build and package processes.",
+            "Agent enforces persistent firewall rules to selectively block ports and networks.",
+            "Developed, debugged, and deployed code for distributed computing clusters with shared resources.",
+            "Updated servers to handle caching, parsing, audit processing, and managing device quarantines"
+
+        ]
+    },
+    {
+        "company": "Capital One",
+        "position": "Software Engineering",
+        "startDate": "January 2019",
+        "endDate": "April 2019",
+        "points": [
+            "Constructed a Java library to abstract graph algorithms for Amazon Neptune graph database.",
+            "Invented patent-pending architecture for data storage and aggregation used in modelling and fraud detection.",
+            "Applied machine-learning to model customer behaviour using Python and SciKit-Learn to determine feasibility of new features.",
+            "Aggregated millions of data entries to engineer properties that feeds into models."
+        ]
+    },
+    {
         "company": "Acronym Software",
         "position": "C++ Developer ",
         "startDate": "May 2018",

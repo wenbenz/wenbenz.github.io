@@ -1,5 +1,25 @@
 [
     {
+        "name": "Neural Evolution Of Feed-Forward Neural Networks",
+        "date": "June 2019",
+        "points": [
+            "Paper investigating neural evolution networks.",
+            "Researched existing techniques used in structurally evolving neural networks.",
+            "Investigated capacity for such algorithms to learn strategies and learn in real-time.",
+            "Tested different algorithms on a simple task to observe how structures evolve."
+        ]
+    },
+    {
+        "name": "Big Brain",
+        "date": "October 2019",
+        "points": [
+            "Used Tensor-Flow to develop a recurrent neural network to generate fake spam emails.",
+            "Created proof of concept for AI generated text.",
+            "Additionally, trained AI on tweets to create a tweet generator."
+
+        ]
+    },
+    {
         "name": "Hangman AI",
         "points": [
             "Created a hangman game using AngularJS which stored a database of words entered as words to guess.",
@@ -20,7 +40,6 @@
     },
     {
         "name": "WatRGoose",
-        "link": "https://play.google.com/store/apps/details?id=com.wenbinzhao.localhax",
         "points": [
             "Developed and published an Android application with a small team in the time span of 12 hours, being the only team to demo a project.",
             "Collaboratively learned to use the Android Studio IDE and set up testing devices.",
@@ -29,26 +48,11 @@
         ]
     },
     {
-        "name": "PackAnts",
-        "points": [
-            "Created a beautiful platform interface using HTML, CSS, ReactJS, JQuery, and Git.",
-            "Applied visual design skills to overhaul the existing UI."
-        ]
-    },
-    {
         "name": "Robotics Team",
         "points": [
             "Designed a robot using Arduino and CAD in collaboration with a team of young engineers.",
             "Implemented algorithms to make robot follow a strip which encodes audio, then play the audio encoded.",
             "Won award for best chassis through excellent use of CAD and plasma cutting technology."
-        ]
-    },
-    {
-        "name": "Loe Designs - A Junior Achievement Company",
-        "points": [
-            "Created a screen-printing company with partners by identifying supply and demand and exercising skills in resource management, budgeting, and advertising.",
-            "Mediated conflict and oversaw production.",
-            "Discussed executive decisions with colleagues."
         ]
     },
     {
