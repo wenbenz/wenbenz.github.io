@@ -38,7 +38,7 @@ export class Welcome extends React.Component {
                         <p>You can reach me at </p>
                         <ul>
                             <li>
-                                <Contact type='phone' value='306-737-2773' /></li>
+                                <Contact type='phone' value='639-997-ZHAO (639-997-9426)' /></li>
                             <li>
                                 <Contact type='email' value='ben@wenbinzhao.com' />
                             </li>
