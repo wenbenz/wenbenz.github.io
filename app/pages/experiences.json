@@ -2,6 +2,7 @@
     {
         "company": "Arctic Wolf Networks",
         "position": "Software Engineering - Risk Platform",
+        "logo": "img/awn.jpg",
         "startDate": "September 2019",
         "endDate": "December 2019",
         "points": [
@@ -16,6 +17,7 @@
     {
         "company": "Capital One",
         "position": "Software Engineering",
+        "logo": "img/cap1.png",
         "startDate": "January 2019",
         "endDate": "April 2019",
         "points": [
