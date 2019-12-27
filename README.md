@@ -1,15 +1,9 @@
 # wenbenz.github.io
 
-Take a look at the WIP build at https://wip.wenbinzhao.com
+Looking back at the end of 2020 after not updating this for a while, I'm not sure what I was thinking (probably just wanted to learn react), but this is over-engineered af. That being said, it's easy to update, so I'll keep this :)
 
-Recently done:
-- [x] Put all common variables in SCSS into one file
-- [x] Break down/distribute monolithic SCSS file to smaller files
-- [x] Break down pages into individual pages
-
-3.0 (Current WIP)
-Break website down into components using a JS Framework. Has been nuked and reset over 3 times now due to project structuring, and framework+tools indecision.
-Currently trying: ReactJS
+3.0 (current)
+Break website down into components using a JS Framework.
 
 2.0
 Website redone with CSS animation and minimal Javascript to challenge myself in design, as well as improving the appearance; old site felt too plain and needed improvement.
