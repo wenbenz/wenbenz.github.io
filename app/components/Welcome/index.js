@@ -32,17 +32,17 @@ export class Welcome extends React.Component {
                     <Card>
                         <h4>Hi!</h4>
                         <p>
-                            I'm Ben, a Computer Science co-op student at the University of Waterloo. I'm in my 4A term seeking employment for the spring term (May to August 2020). You can find my resume <a href="files/resume.pdf">here</a>.
+                            I'm Ben, a Computer Science co-op student at the University of Waterloo. I'm currently in my 4A term seeking employment for the spring term (May to August 2020). You can find my resume <a href="files/resume.pdf">here</a>.
                         </p>
 
                         <h4>What can I do?</h4>
                         <p>
-                            Throughout my academic and professional career, I have gained experience working with a plethora of different languages, frameworks, paradigms, and technologies, so I can work in any modern development environment. I'm capable of quickly adapting and learning new technologies to work with your company's existing code and tackle any new challenges.
+                            Throughout my academic and professional career, I have gained experience working with a plethora of different languages, frameworks, paradigms, and technologies. Consequently, I can work in any modern development environment. I'm capable of quickly adapting and learning new technologies to work with your company's existing code and tackling any challenges.
                         </p>
 
                         <h4>So what am I like?</h4>
                         <p>
-                            I'd describe myself as an active and sociable person. In my free time I dance, rock climb, hike, swim, and skate (I suck at the latter two, but I still enjoy it). I also enjoy boardgames, Dungeons and Dragons, and in general just hanging out with people. I'm also very open-minded and I love trying new things :)
+                            I would describe myself as an active and sociable person. In my free time I dance, rock climb, hike, swim, and skate. I also enjoy boardgames, Dungeons and Dragons, and generally hanging out with people. I’m an open-minded individual and I love trying new things :)
                         </p>
                     </Card>
                     <Card>
