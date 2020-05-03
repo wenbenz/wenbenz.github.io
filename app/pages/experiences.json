@@ -10,7 +10,7 @@
             "Used Docker and Make to automate build and package processes.",
             "Agent enforces persistent firewall rules to selectively block ports and networks.",
             "Developed, debugged, and deployed code for distributed computing clusters with shared resources.",
-            "Updated servers to handle caching, parsing, audit processing, and managing device quarantines"
+            "Updated servers to handle caching, parsing, audit processing, and managing device quarantines."
 
         ]
     },
@@ -57,15 +57,14 @@
     {
         "company": "Asia Palace Restaurant",
         "logo": "img/asiapalace.jpg",
-        "position": "IT and Manager",
+        "position": "IT and Management",
         "startDate": "January 2016",
         "endDate": "September 2016",
         "points": [
-            " Programmed and installed a point-of-sale system to save company over $2000 and to provide more efficient service and analytics.",
-            "Exercised strong communication and organization skills to optimize daily operations and mediate conflicts.",
-            "Provided excellent service to establish the “best[Chinese restaurant] in Regina”.",
+            "Exercised strong communication and organization skills to ensure daily operations and mediate conflicts.",
+            "Provided excellent service to establish the “best [Chinese restaurant] in Regina” (from Google reviews).",
             "Maintained company image by providing excellent customer care.",
-            "Designing and printing menus and other media, advertising, and maintained presence in social media.",
+            "Designed and printed menus, handled advertising, and maintained presence in social media.",
             "Obtained necessary permits for the establishment of the restaurant."
         ]
     }
