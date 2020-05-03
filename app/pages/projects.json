@@ -1,5 +1,36 @@
 [
     {
+        "name": "Stonks",
+        "date": "May 2020",
+        "link": "https://github.com/wenbenz/stonks",
+        "points": [
+            "Designed and implemented tool for managing personal investments portfolio in Go.",
+            "Created a command line user interface to create, configure, and analyze portfolio.",
+            "Optimized portfolio allocations based on user defined targets."
+        ]
+    },
+    {
+        "name": "Simplex Algorithm Go (SAGo)",
+        "date": "April 2020",
+        "link": "https://github.com/wenbenz/sago",
+        "points":[
+            "Implemented simplex algorithm in Go.",
+            "Created developer interface to abstract specifics of inequality constraints.",
+            "Set up Continuous Integration using GitHub Actions to automate testing and development workflow."
+        ]
+    },
+    {
+        "name": "Branch Prediction Using Dynamically Trained Neural Networks",
+        "date": "April 2020",
+        "link": "https://github.com/wenbenz/py-pbp-sim",
+        "points": [
+            "Paper investigating the effectiveness of using neural networks for branch prediction.",
+            "Wrote a modular branch prediction simulator in Python that allowed various branch prediction techniques.",
+            "Extracted branch prediction data from spec2k6 integer benchmarks.",
+            "Tested various branch prediction methods including various configurations of hashed perceptron predictors and feed forward neural networks."
+        ]
+    },
+    {
         "name": "Neural Evolution Of Feed-Forward Neural Networks",
         "date": "June 2019",
         "points": [
@@ -24,7 +55,7 @@
         "points": [
             "Created a hangman game using AngularJS which stored a database of words entered as words to guess.",
             "Developed an algorithm to determine the most likely letter to appear based on length of given word, letter frequency, and word use frequency.",
-            "Bot undefeatable with greater - than - 3 letter words after populating database with 20K words."
+            "Bot undefeatable with greater-than-3 letter words after populating database with 20K words."
         ]
     },
     {
@@ -32,7 +63,6 @@
         "link": "https://notepadd.herokuapp.com/",
         "points": [
             "Developed a web - based application by implementing JavaScript to parse English text.",
-            "Created a detailed plan by dividing and assigning tasks in manageable chunks.",
             "Created musical rhythms and flows by analyzing and interpreting sentences and word lengths.",
             "Mapped notes to syllables in iambic pentameter to create musical melodies.",
             "Designed and fabricated an intuitive, functional, and visually appealing user interface using Materialize CSS."
@@ -43,7 +73,6 @@
         "points": [
             "Developed and published an Android application with a small team in the time span of 12 hours, being the only team to demo a project.",
             "Collaboratively learned to use the Android Studio IDE and set up testing devices.",
-            "Kept a lighthearted and enthusiastic atmosphere in the team.",
             "Experienced the process of publishing, updating, and fixing bugs across multiple devices."
         ]
     },
