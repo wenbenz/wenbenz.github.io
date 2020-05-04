@@ -1,8 +1,8 @@
 [
     {
-        "name": "Stonks",
+        "name": "Covata",
         "date": "May 2020",
-        "link": "https://github.com/wenbenz/stonks",
+        "link": "https://github.com/wenbenz/covata",
         "points": [
             "Designed and implemented tool for managing personal investments portfolio in Go.",
             "Created a command line user interface to create, configure, and analyze portfolio.",
