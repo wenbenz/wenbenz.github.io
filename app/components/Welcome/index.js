@@ -32,7 +32,7 @@ export class Welcome extends React.Component {
                     <Card>
                         <h4>Hi!</h4>
                         <p>
-                            I'm Ben, a Computer Science co-op student at the University of Waterloo. I'm currently in my 4A term seeking employment for the spring term (May to August 2020). You can find my resume <a href="files/resume.pdf">here</a>.
+                            I'm Ben, I have a Bachelor's of Computer Science (Co-op) from the University of Waterloo. I'm currently working full time at Okta building mission critical services that many other teams depend on. You can find my resume <a href="files/resume.pdf">here</a>.
                         </p>
 
                         <h4>What can I do?</h4>
@@ -42,7 +42,7 @@ export class Welcome extends React.Component {
 
                         <h4>So what am I like?</h4>
                         <p>
-                            I would describe myself as an active and sociable person. In my free time I dance, rock climb, hike, swim, and skate. I also enjoy boardgames, Dungeons and Dragons, and generally hanging out with people. I’m an open-minded individual and I love trying new things :)
+                            I would describe myself as an active and social person. In my free time I dance, rock climb, hike, swim, and skate. I also enjoy boardgames, Dungeons and Dragons, and generally just hanging out with people. I’m an open-minded individual and I love trying new things :)
                         </p>
                     </Card>
                     <Card>
